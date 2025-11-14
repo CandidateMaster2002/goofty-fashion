@@ -1,0 +1,5 @@
+{
+  "name": "Goofty Fashions Demo",
+  "description": "A frontend-only demo for 'Goofty Fashions (Dhanbad)' combining a customer storefront and an admin dashboard. It showcases rental management, custom orders, inventory, and sales, with all data persisted in the browser's local storage.",
+  "requestFramePermissions": []
+}
