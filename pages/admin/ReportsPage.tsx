@@ -2,13 +2,12 @@ import React, { useMemo } from 'react';
 import { useAppData } from '../../hooks/useAppData';
 import { Card } from '../../components/ui/Card';
 import { CustomOrderStatus } from '../../types';
-import { DollarSign, Briefcase, ShoppingBag, Scissors } from 'lucide-react';
 
 // A small, local component for displaying a single statistic.
-const StatCard: React.FC<{ title: string; value: string | number; icon: React.ReactElement }> = ({ title, value, icon }) => (
-    <Card className="flex items-center p-4 transition-all duration-300 ease-in-out hover:shadow-md">
-        <div className="p-3 bg-primary-100 rounded-full mr-4 text-primary-600">
-            {React.cloneElement(icon, { size: 24 })}
+const StatCard: React.FC<{ title: string; value: string | number; icon: React.ReactNode; iconBgColor: string; }> = ({ title, value, icon, iconBgColor }) => (
+    <Card className="flex items-center p-4 transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1">
+        <div className={`p-3 rounded-full mr-4 text-3xl flex items-center justify-center ${iconBgColor}`}>
+            {icon}
         </div>
         <div>
             <p className="text-sm font-medium text-slate-500">{title}</p>
@@ -18,7 +17,7 @@ const StatCard: React.FC<{ title: string; value: string | number; icon: React.Re
 );
 
 // A more advanced BarChart component for visualization.
-const BarChart: React.FC<{ data: { label: string; value: number; change?: number }[], title: string, formatter?: (value: number) => string }> = ({ data, title, formatter = (v) => v.toLocaleString() }) => {
+const BarChart: React.FC<{ data: { label: string; value: number; change?: number }[], title: string, formatter?: (value: number) => string, barColor?: string }> = ({ data, title, formatter = (v) => v.toLocaleString(), barColor = 'bg-sky-500' }) => {
     const maxValue = Math.max(...data.map(d => d.value), 1); // Avoid division by zero
     
     if (data.length === 0) {
@@ -40,7 +39,7 @@ const BarChart: React.FC<{ data: { label: string; value: number; change?: number
                     <div key={item.label} className="flex items-center text-sm" title={`${item.label}: ${formatter(item.value)}`}>
                         <span className="w-1/4 text-slate-600 truncate">{item.label}</span>
                         <div className="w-3/4 flex items-center">
-                             <div className="bg-gradient-to-r from-primary-500 to-secondary-400 h-6 rounded-md" style={{ width: `${(item.value / maxValue) * 100}%` }}></div>
+                             <div className={`${barColor} h-6 rounded-md transition-all duration-500`} style={{ width: `${(item.value / maxValue) * 100}%` }}></div>
                              <span className="ml-3 font-semibold w-24 text-slate-700">{formatter(item.value)}</span>
                              {item.change !== undefined && item.change !== 0 && (
                                 <span className={`flex items-center text-xs font-semibold ${item.change >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
@@ -181,17 +180,17 @@ export const ReportsPage: React.FC = () => {
             <h1 className="text-3xl font-bold text-slate-800">Reports Dashboard</h1>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <StatCard title="Total Revenue" value={`₹${keyMetrics.totalRevenue.toLocaleString('en-IN')}`} icon={<DollarSign />} />
-                <StatCard title="Total Rentals Booked" value={keyMetrics.totalRentals} icon={<Briefcase />} />
-                <StatCard title="Total Sales Transactions" value={keyMetrics.totalSales} icon={<ShoppingBag />} />
-                <StatCard title="Pending Custom Orders" value={keyMetrics.pendingOrders} icon={<Scissors />} />
+                <StatCard title="Total Revenue" value={`₹${keyMetrics.totalRevenue.toLocaleString('en-IN')}`} icon="💰" iconBgColor="bg-yellow-100" />
+                <StatCard title="Total Rentals Booked" value={keyMetrics.totalRentals} icon="🛍️" iconBgColor="bg-indigo-100"/>
+                <StatCard title="Total Sales Transactions" value={keyMetrics.totalSales} icon="🛒" iconBgColor="bg-emerald-100"/>
+                <StatCard title="Pending Custom Orders" value={keyMetrics.pendingOrders} icon="✂️" iconBgColor="bg-rose-100"/>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <BarChart data={salesByMonth} title="Sales by Month (with MoM comparison)" formatter={(v) => `₹${Math.round(v).toLocaleString('en-IN')}`} />
-                <BarChart data={topCustomersByRevenue} title="Top 5 Customers by Revenue" formatter={(v) => `₹${Math.round(v).toLocaleString('en-IN')}`} />
-                <BarChart data={topRentedItems} title="Top 5 Rented Items (by units rented)" />
-                <BarChart data={topPurchasedItems} title="Top 5 Purchased Items (by units sold)" />
+                <BarChart data={salesByMonth} title="Sales by Month (with MoM comparison)" formatter={(v) => `₹${Math.round(v).toLocaleString('en-IN')}`} barColor="bg-sky-500" />
+                <BarChart data={topCustomersByRevenue} title="Top 5 Customers by Revenue" formatter={(v) => `₹${Math.round(v).toLocaleString('en-IN')}`} barColor="bg-emerald-500" />
+                <BarChart data={topRentedItems} title="Top 5 Rented Items (by units rented)" barColor="bg-amber-500" />
+                <BarChart data={topPurchasedItems} title="Top 5 Purchased Items (by units sold)" barColor="bg-violet-500" />
             </div>
         </div>
     );
