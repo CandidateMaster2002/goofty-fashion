@@ -1,86 +1,635 @@
 {
   "customers": [
     {
-      "id": "cust-001", "name": "Priya Sharma", "phone": "9876543210", "email": "priya.sharma@example.com", "address": "123 Main St, Dhanbad",
-      "measurement_profile": { "bust": 34, "waist": 28, "hip": 36, "length": 42, "sleeve": 18, "units": "in" },
-      "notes": "Prefers bright colors.", "created_at": "2023-10-01T10:00:00Z"
+      "id": "cust-001",
+      "name": "Priya Sharma",
+      "phone": "9876543210",
+      "email": "priya.sharma@example.com",
+      "address": "123 Main St, Dhanbad",
+      "measurement_profile": {
+        "bust": 34,
+        "waist": 28,
+        "hip": 36,
+        "length": 42,
+        "sleeve": 18,
+        "units": "in"
+      },
+      "notes": "Prefers bright colors.",
+      "created_at": "2023-10-01T10:00:00Z"
     },
     {
-      "id": "cust-002", "name": "Anjali Verma", "phone": "9876543211", "email": "anjali.verma@example.com", "address": "456 Park Ave, Dhanbad",
-      "measurement_profile": { "bust": 36, "waist": 30, "hip": 38, "length": 44, "sleeve": 19, "units": "in" },
-      "notes": "Allergic to synthetic fabrics.", "created_at": "2023-10-05T11:30:00Z"
+      "id": "cust-002",
+      "name": "Anjali Verma",
+      "phone": "9876543211",
+      "email": "anjali.verma@example.com",
+      "address": "456 Park Ave, Dhanbad",
+      "measurement_profile": {
+        "bust": 36,
+        "waist": 30,
+        "hip": 38,
+        "length": 44,
+        "sleeve": 19,
+        "units": "in"
+      },
+      "notes": "Allergic to synthetic fabrics.",
+      "created_at": "2023-10-05T11:30:00Z"
     },
     {
-      "id": "cust-003", "name": "Sneha Reddy", "phone": "9876543212", "email": "sneha.reddy@example.com", "address": "789 Lake Rd, Dhanbad",
-      "measurement_profile": { "bust": 32, "waist": 26, "hip": 34, "units": "in" },
-      "notes": "", "created_at": "2023-10-10T14:00:00Z"
+      "id": "cust-003",
+      "name": "Sneha Reddy",
+      "phone": "9876543212",
+      "email": "sneha.reddy@example.com",
+      "address": "789 Lake Rd, Dhanbad",
+      "measurement_profile": {
+        "bust": 32,
+        "waist": 26,
+        "hip": 34,
+        "units": "in"
+      },
+      "notes": "",
+      "created_at": "2023-10-10T14:00:00Z"
     },
     {
-      "id": "cust-004", "name": "Meera Gupta", "phone": "9876543213", "email": "meera.g@example.com", "address": "101 Hilltop Apts, Dhanbad",
-      "measurement_profile": { "bust": 38, "waist": 32, "hip": 40, "length": 45, "sleeve": 20, "units": "in" },
-      "notes": "Likes traditional designs.", "created_at": "2023-10-12T09:00:00Z"
+      "id": "cust-004",
+      "name": "Meera Gupta",
+      "phone": "9876543213",
+      "email": "meera.g@example.com",
+      "address": "101 Hilltop Apts, Dhanbad",
+      "measurement_profile": {
+        "bust": 38,
+        "waist": 32,
+        "hip": 40,
+        "length": 45,
+        "sleeve": 20,
+        "units": "in"
+      },
+      "notes": "Likes traditional designs.",
+      "created_at": "2023-10-12T09:00:00Z"
     }
   ],
+ 
   "items": [
-    { "id": "itm-001", "sku": "GF-RD-001", "title": "Red Anarkali Kurti - Rayon", "category": "Kurti", "sizes": ["S","M","L"], "color": "Red", "qty": 5, "rent_price_per_day": 400, "buy_price": 1200, "condition": "Good", "images": ["https://images.unsplash.com/photo-1617922001434-c7a42140b389?q=80&w=800&auto=format&fit=crop"], "status": "available", "description": "Comfortable rayon anarkali kurti, embroidered yoke." },
-    { "id": "itm-002", "sku": "GF-BL-002", "title": "Blue Bridal Lehenga", "category": "Lehenga", "sizes": ["M"], "color": "Blue", "qty": 2, "rent_price_per_day": 2500, "buy_price": 15000, "condition": "Excellent", "images": ["https://images.unsplash.com/photo-1594399039349-647617d3d258?q=80&w=800&auto=format&fit=crop"], "status": "available", "description": "Heavy velvet lehenga with zardozi work." },
-    { "id": "itm-003", "sku": "GF-GR-003", "title": "Green Palazzo Set", "category": "Palazzo Set", "sizes": ["L", "XL"], "color": "Green", "qty": 8, "rent_price_per_day": 500, "buy_price": 2000, "condition": "Good", "images": ["https://images.unsplash.com/photo-1588117269521-b38435b13e9a?q=80&w=800&auto=format&fit=crop"], "status": "available", "description": "Cotton palazzo set with printed dupatta." },
-    { "id": "itm-004", "sku": "GF-PK-004", "title": "Pink Dance Costume", "category": "Dance Dress", "sizes": ["S", "M"], "color": "Pink", "qty": 3, "rent_price_per_day": 700, "buy_price": 3500, "condition": "Fair", "images": ["https://images.unsplash.com/photo-1519340241574-2cec6a3d10a3?q=80&w=800&auto=format&fit=crop"], "status": "available", "description": "Lightweight costume for stage performances." },
-    { "id": "itm-005", "sku": "GF-YL-005", "title": "Yellow Tunic", "category": "Tunic", "sizes": ["S", "M", "L", "XL"], "color": "Yellow", "qty": 10, "rent_price_per_day": 300, "buy_price": 900, "condition": "New", "images": ["https://images.unsplash.com/photo-1623945484893-5591345f1b20?q=80&w=800&auto=format&fit=crop"], "status": "available", "description": "Simple and elegant daily wear tunic." },
-    { "id": "itm-006", "sku": "GF-BK-006", "title": "Black Sharara Set", "category": "Sharara", "sizes": ["M", "L"], "color": "Black", "qty": 4, "rent_price_per_day": 800, "buy_price": 4500, "condition": "Excellent", "images": ["https://images.unsplash.com/photo-1620713742426-53a5b6c38234?q=80&w=800&auto=format&fit=crop"], "status": "available", "description": "Georgette sharara with intricate sequin work." },
-    { "id": "itm-007", "sku": "GF-OR-007", "title": "Orange Silk Saree", "category": "Saree", "sizes": ["Free"], "color": "Orange", "qty": 6, "rent_price_per_day": 1200, "buy_price": 8000, "condition": "New", "images": ["https://images.unsplash.com/photo-1610192308940-e17505b57a52?q=80&w=800&auto=format&fit=crop"], "status": "available", "description": "Pure Kanjivaram silk saree with gold zari border." },
-    { "id": "itm-008", "sku": "GF-PR-008", "title": "Purple Patiala Suit", "category": "Suit", "sizes": ["L", "XL", "XXL"], "color": "Purple", "qty": 7, "rent_price_per_day": 600, "buy_price": 2800, "condition": "Good", "images": ["https://images.unsplash.com/photo-1603931553535-64f33b1e3a1f?q=80&w=800&auto=format&fit=crop"], "status": "available", "description": "Crepe Patiala suit with phulkari embroidery." },
-    { "id": "itm-009", "sku": "GF-MR-009", "title": "Maroon Velvet Gown", "category": "Gown", "sizes": ["S", "M"], "color": "Maroon", "qty": 3, "rent_price_per_day": 1500, "buy_price": 9500, "condition": "Excellent", "images": ["https://images.unsplash.com/photo-1595261247671-6c4b25684e27?q=80&w=800&auto=format&fit=crop"], "status": "available", "description": "Elegant evening gown with a fishtail cut." },
-    { "id": "itm-010", "sku": "GF-GD-010", "title": "Golden Sherwani", "category": "Sherwani", "sizes": ["M", "L", "XL"], "color": "Gold", "qty": 4, "rent_price_per_day": 3000, "buy_price": 20000, "condition": "Excellent", "images": ["https://images.unsplash.com/photo-1623945484928-86f35b44a45f?q=80&w=800&auto=format&fit=crop"], "status": "available", "description": "Brocade sherwani for weddings and special occasions." }
+    {
+      "id": "itm-001",
+      "sku": "GF-RD-001",
+      "title": "Red Anarkali Kurti - Rayon",
+      "category": "Kurti",
+      "sizes": ["S", "M", "L"],
+      "color": "Red",
+      "qty": 5,
+      "rent_price_per_day": 400,
+      "buy_price": 1200,
+      "condition": "Good",
+      "images": [
+        "https://images.unsplash.com/photo-1706943262259-ffe65cb2bf70?q=80&w=687&auto=format&fit=crop"
+      ],
+      "status": "available",
+      "description": "Comfortable rayon anarkali kurti, embroidered yoke."
+    },
+    {
+      "id": "itm-002",
+      "sku": "GF-BL-002",
+      "title": "Blue Bridal Lehenga",
+      "category": "Lehenga",
+      "sizes": ["M"],
+      "color": "Blue",
+      "qty": 2,
+      "rent_price_per_day": 2500,
+      "buy_price": 15000,
+      "condition": "Excellent",
+      "images": [
+        "https://images.unsplash.com/photo-1668371459824-094a960a227d?q=80&w=687&auto=format&fit=crop"
+      ],
+      "status": "available",
+      "description": "Heavy velvet lehenga with zardozi work."
+    },
+    {
+      "id": "itm-003",
+      "sku": "GF-GR-003",
+      "title": "Green Palazzo Set",
+      "category": "Palazzo Set",
+      "sizes": ["L", "XL"],
+      "color": "Green",
+      "qty": 8,
+      "rent_price_per_day": 500,
+      "buy_price": 2000,
+      "condition": "Good",
+      "images": [
+        "https://images.unsplash.com/photo-1701251995386-78d23c313621?q=80&w=687&auto=format&fit=crop"
+      ],
+      "status": "available",
+      "description": "Cotton palazzo set with printed dupatta."
+    },
+    {
+      "id": "itm-004",
+      "sku": "GF-PK-004",
+      "title": "Pink Dance Costume",
+      "category": "Dance Dress",
+      "sizes": ["S", "M"],
+      "color": "Pink",
+      "qty": 3,
+      "rent_price_per_day": 700,
+      "buy_price": 3500,
+      "condition": "Fair",
+      "images": [
+        "https://images.unsplash.com/photo-1649140334873-3d8823e5ce40?q=80&w=687&auto=format&fit=crop"
+      ],
+      "status": "available",
+      "description": "Lightweight costume for stage performances."
+    },
+    {
+      "id": "itm-005",
+      "sku": "GF-YL-005",
+      "title": "Yellow Tunic",
+      "category": "Tunic",
+      "sizes": ["S", "M", "L", "XL"],
+      "color": "Yellow",
+      "qty": 10,
+      "rent_price_per_day": 300,
+      "buy_price": 900,
+      "condition": "New",
+      "images": [
+        "https://images.unsplash.com/photo-1762708593228-06d86c3e0209?q=80&w=687&auto=format&fit=crop"
+      ],
+      "status": "available",
+      "description": "Simple and elegant daily wear tunic."
+    },
+    {
+      "id": "itm-006",
+      "sku": "GF-BK-006",
+      "title": "Black Sharara Set",
+      "category": "Sharara",
+      "sizes": ["M", "L"],
+      "color": "Black",
+      "qty": 4,
+      "rent_price_per_day": 800,
+      "buy_price": 4500,
+      "condition": "Excellent",
+      "images": [
+        "https://images.unsplash.com/photo-1762708593228-06d86c3e0209?q=80&w=687&auto=format&fit=crop"
+      ],
+      "status": "available",
+      "description": "Georgette sharara with intricate sequin work."
+    },
+    {
+      "id": "itm-007",
+      "sku": "GF-OR-007",
+      "title": "Orange Silk Saree",
+      "category": "Saree",
+      "sizes": ["Free"],
+      "color": "Orange",
+      "qty": 6,
+      "rent_price_per_day": 1200,
+      "buy_price": 8000,
+      "condition": "New",
+      "images": [
+        "https://images.unsplash.com/photo-1587027512224-74fa1f061e45?q=80&w=1170&auto=format&fit=crop"
+      ],
+      "status": "available",
+      "description": "Pure Kanjivaram silk saree with gold zari border."
+    },
+    {
+      "id": "itm-008",
+      "sku": "GF-PR-008",
+      "title": "Purple Patiala Suit",
+      "category": "Suit",
+      "sizes": ["L", "XL", "XXL"],
+      "color": "Purple",
+      "qty": 7,
+      "rent_price_per_day": 600,
+      "buy_price": 2800,
+      "condition": "Good",
+      "images": [
+        "https://images.unsplash.com/photo-1706943262259-ffe65cb2bf70?q=80&w=687&auto=format&fit=crop"
+      ],
+      "status": "available",
+      "description": "Crepe Patiala suit with phulkari embroidery."
+    },
+    {
+      "id": "itm-009",
+      "sku": "GF-MR-009",
+      "title": "Maroon Velvet Gown",
+      "category": "Gown",
+      "sizes": ["S", "M"],
+      "color": "Maroon",
+      "qty": 3,
+      "rent_price_per_day": 1500,
+      "buy_price": 9500,
+      "condition": "Excellent",
+      "images": [
+        "https://images.unsplash.com/photo-1706943262259-ffe65cb2bf70?q=80&w=687&auto=format&fit=crop"
+      ],
+      "status": "available",
+      "description": "Elegant evening gown with a fishtail cut."
+    },
+    {
+      "id": "itm-010",
+      "sku": "GF-GD-010",
+      "title": "Golden Sherwani",
+      "category": "Sherwani",
+      "sizes": ["M", "L", "XL"],
+      "color": "Gold",
+      "qty": 4,
+      "rent_price_per_day": 3000,
+      "buy_price": 20000,
+      "condition": "Excellent",
+      "images": [
+        "https://images.unsplash.com/photo-1748799026215-7edf19d52396?q=80&w=736&auto=format&fit=crop"
+      ],
+      "status": "available",
+      "description": "Brocade sherwani for weddings and special occasions."
+    }
   ],
+
+
   "rentals": [
-    { "id": "rent-001", "customer_id": "cust-001", "items": [{"item_id": "itm-001", "qty": 1, "price_per_day": 400}], "start_date": "2024-07-10T00:00:00Z", "end_date": "2024-07-15T00:00:00Z", "deposit_amount": 1000, "total_amount": 2000, "status": "Active" },
-    { "id": "rent-002", "customer_id": "cust-002", "items": [{"item_id": "itm-002", "qty": 1, "price_per_day": 2500}], "start_date": "2024-07-12T00:00:00Z", "end_date": "2024-07-18T00:00:00Z", "deposit_amount": 5000, "total_amount": 15000, "status": "Reserved" },
-    { "id": "rent-003", "customer_id": "cust-003", "items": [{"item_id": "itm-007", "qty": 1, "price_per_day": 1200}], "start_date": "2024-07-20T00:00:00Z", "end_date": "2024-07-22T00:00:00Z", "deposit_amount": 3000, "total_amount": 2400, "status": "Reserved" },
-    { "id": "rent-004", "customer_id": "cust-001", "items": [{"item_id": "itm-004", "qty": 2, "price_per_day": 700}], "start_date": "2024-06-25T00:00:00Z", "end_date": "2024-06-30T00:00:00Z", "deposit_amount": 2000, "total_amount": 7000, "status": "Returned" },
-    { "id": "rent-005", "customer_id": "cust-004", "items": [{"item_id": "itm-010", "qty": 1, "price_per_day": 3000}], "start_date": "2024-07-01T00:00:00Z", "end_date": "2024-07-05T00:00:00Z", "deposit_amount": 8000, "total_amount": 12000, "status": "Late", "damage_notes": "Slight tear on the sleeve." },
-    { "id": "rent-006", "customer_id": "cust-002", "items": [{"item_id": "itm-003", "qty": 1, "price_per_day": 500}], "start_date": "2024-07-02T00:00:00Z", "end_date": "2024-07-04T00:00:00Z", "deposit_amount": 1000, "total_amount": 1000, "status": "Returned" },
-    { "id": "rent-007", "customer_id": "cust-003", "items": [{"item_id": "itm-005", "qty": 1, "price_per_day": 300}], "start_date": "2024-07-08T00:00:00Z", "end_date": "2024-07-11T00:00:00Z", "deposit_amount": 500, "total_amount": 900, "status": "Active" },
-    { "id": "rent-008", "customer_id": "cust-004", "items": [{"item_id": "itm-006", "qty": 1, "price_per_day": 800}], "start_date": "2024-07-15T00:00:00Z", "end_date": "2024-07-20T00:00:00Z", "deposit_amount": 2000, "total_amount": 4000, "status": "Active" },
-    { "id": "rent-009", "customer_id": "cust-001", "items": [{"item_id": "itm-008", "qty": 1, "price_per_day": 600}], "start_date": "2024-07-22T00:00:00Z", "end_date": "2024-07-28T00:00:00Z", "deposit_amount": 1500, "total_amount": 3600, "status": "Reserved" },
-    { "id": "rent-010", "customer_id": "cust-002", "items": [{"item_id": "itm-009", "qty": 1, "price_per_day": 1500}], "start_date": "2024-07-29T00:00:00Z", "end_date": "2024-08-02T00:00:00Z", "deposit_amount": 4000, "total_amount": 6000, "status": "Reserved" },
-    { "id": "rent-011", "customer_id": "cust-004", "items": [{"item_id": "itm-001", "qty": 1, "price_per_day": 400}], "start_date": "2024-06-10T00:00:00Z", "end_date": "2024-06-15T00:00:00Z", "deposit_amount": 1000, "total_amount": 2000, "status": "Returned" },
-    { "id": "rent-012", "customer_id": "cust-003", "items": [{"item_id": "itm-004", "qty": 1, "price_per_day": 700}], "start_date": "2024-06-18T00:00:00Z", "end_date": "2024-06-22T00:00:00Z", "deposit_amount": 1500, "total_amount": 2800, "status": "Returned" },
-    { "id": "rent-013", "customer_id": "cust-001", "items": [{"item_id": "itm-010", "qty": 1, "price_per_day": 3000}], "start_date": "2024-08-05T00:00:00Z", "end_date": "2024-08-10T00:00:00Z", "deposit_amount": 8000, "total_amount": 15000, "status": "Reserved" },
-    { "id": "rent-014", "customer_id": "cust-004", "items": [{"item_id": "itm-007", "qty": 1, "price_per_day": 1200}], "start_date": "2024-08-12T00:00:00Z", "end_date": "2024-08-15T00:00:00Z", "deposit_amount": 3000, "total_amount": 3600, "status": "Reserved" },
-    { "id": "rent-015", "customer_id": "cust-001", "items": [{"item_id": "itm-003", "qty": 1, "price_per_day": 500}], "start_date": "2024-07-05T00:00:00Z", "end_date": "2024-07-09T00:00:00Z", "deposit_amount": 1000, "total_amount": 2000, "status": "Active" },
-    { "id": "rent-016", "customer_id": "cust-002", "items": [{"item_id": "itm-005", "qty": 1, "price_per_day": 300}], "start_date": "2024-07-18T00:00:00Z", "end_date": "2024-07-21T00:00:00Z", "deposit_amount": 500, "total_amount": 900, "status": "Reserved" },
-    { "id": "rent-017", "customer_id": "cust-003", "items": [{"item_id": "itm-006", "qty": 1, "price_per_day": 800}], "start_date": "2024-07-01T00:00:00Z", "end_date": "2024-07-03T00:00:00Z", "deposit_amount": 2000, "total_amount": 1600, "status": "Returned" },
-    { "id": "rent-018", "customer_id": "cust-001", "items": [{"item_id": "itm-001", "qty": 1, "price_per_day": 400}], "start_date": "2025-11-05T00:00:00Z", "end_date": "2025-11-10T00:00:00Z", "deposit_amount": 1000, "total_amount": 2000, "status": "Reserved" },
-    { "id": "rent-019", "customer_id": "cust-002", "items": [{"item_id": "itm-006", "qty": 1, "price_per_day": 800}], "start_date": "2025-11-15T00:00:00Z", "end_date": "2025-11-20T00:00:00Z", "deposit_amount": 2000, "total_amount": 4000, "status": "Reserved" },
-    { "id": "rent-020", "customer_id": "cust-003", "items": [{"item_id": "itm-007", "qty": 1, "price_per_day": 1200}], "start_date": "2025-11-22T00:00:00Z", "end_date": "2025-11-28T00:00:00Z", "deposit_amount": 3000, "total_amount": 7200, "status": "Reserved" },
-    { "id": "rent-021", "customer_id": "cust-004", "items": [{"item_id": "itm-010", "qty": 1, "price_per_day": 3000}], "start_date": "2025-11-01T00:00:00Z", "end_date": "2025-11-05T00:00:00Z", "deposit_amount": 8000, "total_amount": 12000, "status": "Active" },
-    { "id": "rent-022", "customer_id": "cust-001", "items": [{"item_id": "itm-004", "qty": 1, "price_per_day": 700}], "start_date": "2025-11-11T00:00:00Z", "end_date": "2025-11-14T00:00:00Z", "deposit_amount": 1500, "total_amount": 2100, "status": "Reserved" }
+    {
+      "id": "rent-001",
+      "customer_id": "cust-001",
+      "items": [{ "item_id": "itm-001", "qty": 1, "price_per_day": 400 }],
+      "start_date": "2024-07-10T00:00:00Z",
+      "end_date": "2024-07-15T00:00:00Z",
+      "deposit_amount": 1000,
+      "total_amount": 2000,
+      "status": "Active"
+    },
+    {
+      "id": "rent-002",
+      "customer_id": "cust-002",
+      "items": [{ "item_id": "itm-002", "qty": 1, "price_per_day": 2500 }],
+      "start_date": "2024-07-12T00:00:00Z",
+      "end_date": "2024-07-18T00:00:00Z",
+      "deposit_amount": 5000,
+      "total_amount": 15000,
+      "status": "Reserved"
+    },
+    {
+      "id": "rent-003",
+      "customer_id": "cust-003",
+      "items": [{ "item_id": "itm-007", "qty": 1, "price_per_day": 1200 }],
+      "start_date": "2024-07-20T00:00:00Z",
+      "end_date": "2024-07-22T00:00:00Z",
+      "deposit_amount": 3000,
+      "total_amount": 2400,
+      "status": "Reserved"
+    },
+    {
+      "id": "rent-004",
+      "customer_id": "cust-001",
+      "items": [{ "item_id": "itm-004", "qty": 2, "price_per_day": 700 }],
+      "start_date": "2024-06-25T00:00:00Z",
+      "end_date": "2024-06-30T00:00:00Z",
+      "deposit_amount": 2000,
+      "total_amount": 7000,
+      "status": "Returned"
+    },
+    {
+      "id": "rent-005",
+      "customer_id": "cust-004",
+      "items": [{ "item_id": "itm-010", "qty": 1, "price_per_day": 3000 }],
+      "start_date": "2024-07-01T00:00:00Z",
+      "end_date": "2024-07-05T00:00:00Z",
+      "deposit_amount": 8000,
+      "total_amount": 12000,
+      "status": "Late",
+      "damage_notes": "Slight tear on the sleeve."
+    },
+    {
+      "id": "rent-006",
+      "customer_id": "cust-002",
+      "items": [{ "item_id": "itm-003", "qty": 1, "price_per_day": 500 }],
+      "start_date": "2024-07-02T00:00:00Z",
+      "end_date": "2024-07-04T00:00:00Z",
+      "deposit_amount": 1000,
+      "total_amount": 1000,
+      "status": "Returned"
+    },
+    {
+      "id": "rent-007",
+      "customer_id": "cust-003",
+      "items": [{ "item_id": "itm-005", "qty": 1, "price_per_day": 300 }],
+      "start_date": "2024-07-08T00:00:00Z",
+      "end_date": "2024-07-11T00:00:00Z",
+      "deposit_amount": 500,
+      "total_amount": 900,
+      "status": "Active"
+    },
+    {
+      "id": "rent-008",
+      "customer_id": "cust-004",
+      "items": [{ "item_id": "itm-006", "qty": 1, "price_per_day": 800 }],
+      "start_date": "2024-07-15T00:00:00Z",
+      "end_date": "2024-07-20T00:00:00Z",
+      "deposit_amount": 2000,
+      "total_amount": 4000,
+      "status": "Active"
+    },
+    {
+      "id": "rent-009",
+      "customer_id": "cust-001",
+      "items": [{ "item_id": "itm-008", "qty": 1, "price_per_day": 600 }],
+      "start_date": "2024-07-22T00:00:00Z",
+      "end_date": "2024-07-28T00:00:00Z",
+      "deposit_amount": 1500,
+      "total_amount": 3600,
+      "status": "Reserved"
+    },
+    {
+      "id": "rent-010",
+      "customer_id": "cust-002",
+      "items": [{ "item_id": "itm-009", "qty": 1, "price_per_day": 1500 }],
+      "start_date": "2024-07-29T00:00:00Z",
+      "end_date": "2024-08-02T00:00:00Z",
+      "deposit_amount": 4000,
+      "total_amount": 6000,
+      "status": "Reserved"
+    },
+    {
+      "id": "rent-011",
+      "customer_id": "cust-004",
+      "items": [{ "item_id": "itm-001", "qty": 1, "price_per_day": 400 }],
+      "start_date": "2024-06-10T00:00:00Z",
+      "end_date": "2024-06-15T00:00:00Z",
+      "deposit_amount": 1000,
+      "total_amount": 2000,
+      "status": "Returned"
+    },
+    {
+      "id": "rent-012",
+      "customer_id": "cust-003",
+      "items": [{ "item_id": "itm-004", "qty": 1, "price_per_day": 700 }],
+      "start_date": "2024-06-18T00:00:00Z",
+      "end_date": "2024-06-22T00:00:00Z",
+      "deposit_amount": 1500,
+      "total_amount": 2800,
+      "status": "Returned"
+    },
+    {
+      "id": "rent-013",
+      "customer_id": "cust-001",
+      "items": [{ "item_id": "itm-010", "qty": 1, "price_per_day": 3000 }],
+      "start_date": "2024-08-05T00:00:00Z",
+      "end_date": "2024-08-10T00:00:00Z",
+      "deposit_amount": 8000,
+      "total_amount": 15000,
+      "status": "Reserved"
+    },
+    {
+      "id": "rent-014",
+      "customer_id": "cust-004",
+      "items": [{ "item_id": "itm-007", "qty": 1, "price_per_day": 1200 }],
+      "start_date": "2024-08-12T00:00:00Z",
+      "end_date": "2024-08-15T00:00:00Z",
+      "deposit_amount": 3000,
+      "total_amount": 3600,
+      "status": "Reserved"
+    },
+    {
+      "id": "rent-015",
+      "customer_id": "cust-001",
+      "items": [{ "item_id": "itm-003", "qty": 1, "price_per_day": 500 }],
+      "start_date": "2024-07-05T00:00:00Z",
+      "end_date": "2024-07-09T00:00:00Z",
+      "deposit_amount": 1000,
+      "total_amount": 2000,
+      "status": "Active"
+    },
+    {
+      "id": "rent-016",
+      "customer_id": "cust-002",
+      "items": [{ "item_id": "itm-005", "qty": 1, "price_per_day": 300 }],
+      "start_date": "2024-07-18T00:00:00Z",
+      "end_date": "2024-07-21T00:00:00Z",
+      "deposit_amount": 500,
+      "total_amount": 900,
+      "status": "Reserved"
+    },
+    {
+      "id": "rent-017",
+      "customer_id": "cust-003",
+      "items": [{ "item_id": "itm-006", "qty": 1, "price_per_day": 800 }],
+      "start_date": "2024-07-01T00:00:00Z",
+      "end_date": "2024-07-03T00:00:00Z",
+      "deposit_amount": 2000,
+      "total_amount": 1600,
+      "status": "Returned"
+    },
+    {
+      "id": "rent-018",
+      "customer_id": "cust-001",
+      "items": [{ "item_id": "itm-001", "qty": 1, "price_per_day": 400 }],
+      "start_date": "2025-11-05T00:00:00Z",
+      "end_date": "2025-11-10T00:00:00Z",
+      "deposit_amount": 1000,
+      "total_amount": 2000,
+      "status": "Reserved"
+    },
+    {
+      "id": "rent-019",
+      "customer_id": "cust-002",
+      "items": [{ "item_id": "itm-006", "qty": 1, "price_per_day": 800 }],
+      "start_date": "2025-11-15T00:00:00Z",
+      "end_date": "2025-11-20T00:00:00Z",
+      "deposit_amount": 2000,
+      "total_amount": 4000,
+      "status": "Reserved"
+    },
+    {
+      "id": "rent-020",
+      "customer_id": "cust-003",
+      "items": [{ "item_id": "itm-007", "qty": 1, "price_per_day": 1200 }],
+      "start_date": "2025-11-22T00:00:00Z",
+      "end_date": "2025-11-28T00:00:00Z",
+      "deposit_amount": 3000,
+      "total_amount": 7200,
+      "status": "Reserved"
+    },
+    {
+      "id": "rent-021",
+      "customer_id": "cust-004",
+      "items": [{ "item_id": "itm-010", "qty": 1, "price_per_day": 3000 }],
+      "start_date": "2025-11-01T00:00:00Z",
+      "end_date": "2025-11-05T00:00:00Z",
+      "deposit_amount": 8000,
+      "total_amount": 12000,
+      "status": "Active"
+    },
+    {
+      "id": "rent-022",
+      "customer_id": "cust-001",
+      "items": [{ "item_id": "itm-004", "qty": 1, "price_per_day": 700 }],
+      "start_date": "2025-11-11T00:00:00Z",
+      "end_date": "2025-11-14T00:00:00Z",
+      "deposit_amount": 1500,
+      "total_amount": 2100,
+      "status": "Reserved"
+    }
   ],
   "customOrders": [
-    { "id": "co-001", "customer_id": "cust-001", "title": "Saree to Lehenga Conversion", "material_provided": true, "material_notes": "Customer provided a Banarasi silk saree.", "measurement_snapshot": { "bust": 34, "waist": 28, "hip": 36, "units": "in" }, "price_estimate": 4500, "status": "Stitching", "due_date": "2024-07-25T00:00:00Z", "created_at": "2024-07-01T12:00:00Z", "assigned_tailor_id": "user-003" },
-    { "id": "co-002", "customer_id": "cust-003", "title": "Custom Blouse Design", "material_provided": false, "price_estimate": 1500, "measurement_snapshot": { "bust": 32, "waist": 26, "hip": 34, "units": "in" }, "status": "Received", "due_date": "2024-08-05T00:00:00Z", "created_at": "2024-07-05T15:00:00Z" },
-    { "id": "co-003", "customer_id": "cust-002", "title": "Anarkali length alteration", "material_provided": true, "material_notes": "Shorten by 2 inches.", "measurement_snapshot": { "length": 42, "units": "in" }, "price_estimate": 500, "status": "Finishing", "due_date": "2024-07-15T00:00:00Z", "created_at": "2024-07-08T10:00:00Z", "assigned_tailor_id": "user-003" },
-    { "id": "co-004", "customer_id": "cust-004", "title": "New Palazzo Suit from scratch", "material_provided": false, "price_estimate": 3500, "measurement_snapshot": { "bust": 38, "waist": 32, "hip": 40, "units": "in" }, "status": "Cutting", "due_date": "2024-08-10T00:00:00Z", "created_at": "2024-07-11T11:00:00Z" },
-    { "id": "co-005", "customer_id": "cust-001", "title": "Kurti Dupatta Set", "material_provided": false, "price_estimate": 2200, "measurement_snapshot": { "bust": 34, "waist": 28, "hip": 36, "units": "in" }, "status": "Ready", "due_date": "2024-07-20T00:00:00Z", "created_at": "2024-07-02T18:00:00Z", "assigned_tailor_id": "user-003" }
+    {
+      "id": "co-001",
+      "customer_id": "cust-001",
+      "title": "Saree to Lehenga Conversion",
+      "material_provided": true,
+      "material_notes": "Customer provided a Banarasi silk saree.",
+      "measurement_snapshot": {
+        "bust": 34,
+        "waist": 28,
+        "hip": 36,
+        "units": "in"
+      },
+      "price_estimate": 4500,
+      "status": "Stitching",
+      "due_date": "2024-07-25T00:00:00Z",
+      "created_at": "2024-07-01T12:00:00Z",
+      "assigned_tailor_id": "user-003"
+    },
+    {
+      "id": "co-002",
+      "customer_id": "cust-003",
+      "title": "Custom Blouse Design",
+      "material_provided": false,
+      "price_estimate": 1500,
+      "measurement_snapshot": {
+        "bust": 32,
+        "waist": 26,
+        "hip": 34,
+        "units": "in"
+      },
+      "status": "Received",
+      "due_date": "2024-08-05T00:00:00Z",
+      "created_at": "2024-07-05T15:00:00Z"
+    },
+    {
+      "id": "co-003",
+      "customer_id": "cust-002",
+      "title": "Anarkali length alteration",
+      "material_provided": true,
+      "material_notes": "Shorten by 2 inches.",
+      "measurement_snapshot": { "length": 42, "units": "in" },
+      "price_estimate": 500,
+      "status": "Finishing",
+      "due_date": "2024-07-15T00:00:00Z",
+      "created_at": "2024-07-08T10:00:00Z",
+      "assigned_tailor_id": "user-003"
+    },
+    {
+      "id": "co-004",
+      "customer_id": "cust-004",
+      "title": "New Palazzo Suit from scratch",
+      "material_provided": false,
+      "price_estimate": 3500,
+      "measurement_snapshot": {
+        "bust": 38,
+        "waist": 32,
+        "hip": 40,
+        "units": "in"
+      },
+      "status": "Cutting",
+      "due_date": "2024-08-10T00:00:00Z",
+      "created_at": "2024-07-11T11:00:00Z"
+    },
+    {
+      "id": "co-005",
+      "customer_id": "cust-001",
+      "title": "Kurti Dupatta Set",
+      "material_provided": false,
+      "price_estimate": 2200,
+      "measurement_snapshot": {
+        "bust": 34,
+        "waist": 28,
+        "hip": 36,
+        "units": "in"
+      },
+      "status": "Ready",
+      "due_date": "2024-07-20T00:00:00Z",
+      "created_at": "2024-07-02T18:00:00Z",
+      "assigned_tailor_id": "user-003"
+    }
   ],
   "workOrders": [
-    { "id": "wo-001", "custom_order_id": "co-001", "status": "Stitching", "technician_notes": "Cutting complete. Stitching in progress." },
+    {
+      "id": "wo-001",
+      "custom_order_id": "co-001",
+      "status": "Stitching",
+      "technician_notes": "Cutting complete. Stitching in progress."
+    },
     { "id": "wo-002", "custom_order_id": "co-002", "status": "Received" },
     { "id": "wo-003", "custom_order_id": "co-003", "status": "Finishing" },
     { "id": "wo-004", "custom_order_id": "co-004", "status": "Cutting" },
     { "id": "wo-005", "custom_order_id": "co-005", "status": "Ready" }
   ],
   "invoices": [
-    { "id": "inv-001", "customer_id": "cust-001", "related_ref": "rent-001", "amount": 2000, "tax": 360, "discount": 0, "total_amount": 2360, "payment_method": "Card", "paid": false, "created_at": "2023-11-10T10:00:00Z", "items": [{"item_id": "itm-001", "description": "Rental of Red Anarkali Kurti", "qty": 1, "unit_price": 2000, "total": 2000 }] },
-    { "id": "inv-002", "customer_id": "cust-004", "related_ref": "sale-001", "amount": 900, "tax": 162, "discount": 0, "total_amount": 1062, "payment_method": "Cash", "paid": true, "paid_at": "2024-07-09T14:20:00Z", "items": [{"item_id": "itm-005", "description": "Yellow Tunic", "qty": 1, "unit_price": 900, "total": 900 }] }
+    {
+      "id": "inv-001",
+      "customer_id": "cust-001",
+      "related_ref": "rent-001",
+      "amount": 2000,
+      "tax": 360,
+      "discount": 0,
+      "total_amount": 2360,
+      "payment_method": "Card",
+      "paid": false,
+      "created_at": "2023-11-10T10:00:00Z",
+      "items": [
+        {
+          "item_id": "itm-001",
+          "description": "Rental of Red Anarkali Kurti",
+          "qty": 1,
+          "unit_price": 2000,
+          "total": 2000
+        }
+      ]
+    },
+    {
+      "id": "inv-002",
+      "customer_id": "cust-004",
+      "related_ref": "sale-001",
+      "amount": 900,
+      "tax": 162,
+      "discount": 0,
+      "total_amount": 1062,
+      "payment_method": "Cash",
+      "paid": true,
+      "paid_at": "2024-07-09T14:20:00Z",
+      "items": [
+        {
+          "item_id": "itm-005",
+          "description": "Yellow Tunic",
+          "qty": 1,
+          "unit_price": 900,
+          "total": 900
+        }
+      ]
+    }
   ],
   "users": [
-    { "id": "user-001", "name": "Rohan Mehra", "role": "Admin", "email": "rohan.admin@goofty.com" },
-    { "id": "user-002", "name": "Sunita Devi", "role": "Manager", "email": "sunita.manager@goofty.com" },
-    { "id": "user-003", "name": "Karim Khan", "role": "Tailor", "email": "karim.tailor@goofty.com" }
+    {
+      "id": "user-001",
+      "name": "Rohan Mehra",
+      "role": "Admin",
+      "email": "rohan.admin@goofty.com"
+    },
+    {
+      "id": "user-002",
+      "name": "Sunita Devi",
+      "role": "Manager",
+      "email": "sunita.manager@goofty.com"
+    },
+    {
+      "id": "user-003",
+      "name": "Karim Khan",
+      "role": "Tailor",
+      "email": "karim.tailor@goofty.com"
+    }
   ],
   "notifications": [
-    { "id": "notif-001", "type": "warning", "message": "Rental #rent-002 is due for pickup tomorrow.", "recipient_role": "Manager", "sent_at": "2024-07-11T09:00:00Z" }
+    {
+      "id": "notif-001",
+      "type": "warning",
+      "message": "Rental #rent-002 is due for pickup tomorrow.",
+      "recipient_role": "Manager",
+      "sent_at": "2024-07-11T09:00:00Z"
+    }
   ]
 }

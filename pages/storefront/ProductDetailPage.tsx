@@ -13,9 +13,10 @@ export const ProductDetailPage: React.FC = () => {
   const [purchaseType, setPurchaseType] = useState<'buy' | 'rent'>('buy');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-
+  
   const item = useMemo(() => data?.items.find(i => i.id === id), [data, id]);
-
+  console.log(item.images[0]);
+  
   const rentalDays = useMemo(() => {
     if (purchaseType === 'rent' && startDate && endDate) {
       const start = new Date(startDate);
@@ -29,12 +30,12 @@ export const ProductDetailPage: React.FC = () => {
 
   const handleAddToCart = () => {
     if (!item) return;
-
+    
     if (purchaseType === 'rent' && (!startDate || !endDate)) {
       alert('Please select rental dates.');
       return;
     }
-
+    
     const cartItem = {
       id: purchaseType === 'buy' ? `${item.id}-buy` : `${item.id}-rent-${startDate}-${endDate}`,
       type: purchaseType,
@@ -45,10 +46,9 @@ export const ProductDetailPage: React.FC = () => {
     addToCart(cartItem);
     navigate('/checkout');
   };
-
   if (loading) return <div>Loading...</div>;
   if (!item) return <div>Product not found.</div>;
-
+  
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
