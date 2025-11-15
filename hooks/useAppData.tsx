@@ -16,6 +16,9 @@ interface AppDataContextType {
   removeFromCart: (itemId: string) => void;
   updateCartItemQuantity: (itemId: string, quantity: number) => void;
   clearCart: () => void;
+  isCustomOrderModalOpen: boolean;
+  openCustomOrderModal: () => void;
+  closeCustomOrderModal: () => void;
 }
 
 const AppDataContext = createContext<AppDataContextType | undefined>(undefined);
@@ -34,6 +37,7 @@ export const AppDataProvider: React.FC<{ children: ReactNode }> = ({ children })
       return [];
     }
   });
+  const [isCustomOrderModalOpen, setIsCustomOrderModalOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -119,6 +123,8 @@ export const AppDataProvider: React.FC<{ children: ReactNode }> = ({ children })
     setCart([]);
   };
 
+  const openCustomOrderModal = () => setIsCustomOrderModalOpen(true);
+  const closeCustomOrderModal = () => setIsCustomOrderModalOpen(false);
 
   const value = {
     data,
@@ -133,6 +139,9 @@ export const AppDataProvider: React.FC<{ children: ReactNode }> = ({ children })
     removeFromCart,
     updateCartItemQuantity,
     clearCart,
+    isCustomOrderModalOpen,
+    openCustomOrderModal,
+    closeCustomOrderModal,
   };
 
   return <AppDataContext.Provider value={value}>{children}</AppDataContext.Provider>;

@@ -13,9 +13,10 @@ import { RentalsPage } from './pages/admin/RentalsPage';
 import { OrdersPage } from './pages/admin/OrdersPage';
 import { ReportsPage } from './pages/admin/ReportsPage';
 import { Role } from './types';
+import { CustomOrderModal } from './components/storefront/CustomOrderModal';
 
 const AppContent: React.FC = () => {
-  const { loading, error, currentRole } = useAppData();
+  const { loading, error, currentRole, isCustomOrderModalOpen, closeCustomOrderModal } = useAppData();
 
   if (loading) {
     return (
@@ -56,6 +57,7 @@ const AppContent: React.FC = () => {
         {/* Redirect logic */}
         <Route path="*" element={<Navigate to={currentRole === Role.Customer ? "/" : "/admin/dashboard"} replace />} />
       </Routes>
+      {currentRole === Role.Customer && <CustomOrderModal isOpen={isCustomOrderModalOpen} onClose={closeCustomOrderModal} />}
     </div>
   );
 };

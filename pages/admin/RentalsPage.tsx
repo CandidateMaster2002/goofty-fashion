@@ -30,11 +30,11 @@ export const RentalsPage: React.FC = () => {
   };
 
   const statusColorMap: Record<RentalStatus, string> = {
-    [RentalStatus.Reserved]: 'bg-blue-100 text-blue-800',
-    [RentalStatus.Active]: 'bg-green-100 text-green-800',
-    [RentalStatus.Returned]: 'bg-gray-100 text-gray-800',
-    [RentalStatus.Late]: 'bg-red-100 text-red-800',
-    [RentalStatus.Cancelled]: 'bg-yellow-100 text-yellow-800',
+    [RentalStatus.Reserved]: 'bg-indigo-100 text-indigo-800 border-l-4 border-indigo-500',
+    [RentalStatus.Active]: 'bg-emerald-100 text-emerald-800 border-l-4 border-emerald-500',
+    [RentalStatus.Returned]: 'bg-slate-200 text-slate-800 border-l-4 border-slate-500',
+    [RentalStatus.Late]: 'bg-rose-100 text-rose-800 border-l-4 border-rose-500',
+    [RentalStatus.Cancelled]: 'bg-amber-100 text-amber-800 border-l-4 border-amber-500',
   };
 
   return (
@@ -50,29 +50,29 @@ export const RentalsPage: React.FC = () => {
         </div>
       </div>
       
-      <div className="grid grid-cols-7 border-t border-l border-stone-200">
+      <div className="grid grid-cols-7 border-t border-l border-slate-200 bg-white rounded-lg shadow-lg overflow-hidden">
         {weekdays.map(day => (
-          <div key={day} className="p-2 text-center font-semibold border-b border-r border-stone-200 bg-stone-50">
+          <div key={day} className="p-2 text-center font-semibold border-b border-r border-slate-200 bg-slate-50 text-slate-600">
             {day}
           </div>
         ))}
         
         {Array.from({ length: firstDayOfMonth }).map((_, i) => (
-          <div key={`empty-${i}`} className="border-b border-r border-stone-200"></div>
+          <div key={`empty-${i}`} className="border-b border-r border-slate-200 bg-slate-50"></div>
         ))}
         
         {daysOfMonth.map(day => {
           const rentals = getRentalsForDay(day);
           const isToday = areDatesSameDay(day, new Date());
           return (
-            <div key={day.toString()} className="min-h-[120px] p-2 border-b border-r border-stone-200 relative">
-              <span className={`absolute top-2 right-2 text-sm font-semibold ${isToday ? 'bg-teal-600 text-white rounded-full h-6 w-6 flex items-center justify-center' : ''}`}>
+            <div key={day.toString()} className={`min-h-[140px] p-2 border-b border-r border-slate-200 relative transition-colors ${isToday ? 'bg-primary-50' : 'hover:bg-slate-50'}`}>
+              <span className={`text-sm font-semibold ${isToday ? 'bg-primary-600 text-white rounded-full h-7 w-7 flex items-center justify-center' : 'text-slate-600'}`}>
                 {day.getDate()}
               </span>
-              <div className="mt-8 space-y-1">
+              <div className="mt-2 space-y-1">
                 {rentals.map(rental => (
-                    <div key={rental.id} className={`text-xs p-1 rounded-md overflow-hidden truncate ${statusColorMap[rental.status]}`}>
-                        #{rental.id.slice(-4)} - {data?.customers.find(c => c.id === rental.customer_id)?.name.split(' ')[0]}
+                    <div key={rental.id} className={`text-xs p-1.5 rounded-md overflow-hidden truncate ${statusColorMap[rental.status]}`}>
+                        <span className="font-bold">#{rental.id.slice(-4)}</span> - {data?.customers.find(c => c.id === rental.customer_id)?.name.split(' ')[0]}
                     </div>
                 ))}
               </div>

@@ -35,11 +35,11 @@ export const OrdersPage: React.FC = () => {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Custom Orders / Workorders</h1>
       </div>
-      <div className="flex space-x-4 overflow-x-auto pb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
         {KANBAN_STAGES.map(stage => (
-          <div key={stage} className="flex-shrink-0 w-72 bg-stone-100 rounded-lg p-3">
-            <h2 className="font-semibold mb-4 text-center">{stage} ({ordersByStatus(stage).length})</h2>
-            <div className="space-y-3">
+          <div key={stage} className="bg-slate-100 rounded-lg p-3">
+            <h2 className="font-bold text-lg mb-4 text-center text-slate-700">{stage} ({ordersByStatus(stage).length})</h2>
+            <div className="space-y-3 h-full overflow-y-auto">
               {ordersByStatus(stage).map(order => (
                 <OrderKanbanCard
                   key={order.id}

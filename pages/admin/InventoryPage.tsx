@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useAppData } from '../../hooks/useAppData';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
@@ -11,6 +11,7 @@ export const InventoryPage: React.FC = () => {
   const { data, updateData } = useAppData();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [itemToEdit, setItemToEdit] = useState<Item | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleOpenModal = (item?: Item) => {
     setItemToEdit(item || null);
@@ -64,6 +65,11 @@ export const InventoryPage: React.FC = () => {
       reader.readAsText(file);
   }
 
+  // FIX: Create a handler to trigger the file input click.
+  const handleImportClick = () => {
+    fileInputRef.current?.click();
+  };
+
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
@@ -72,10 +78,17 @@ export const InventoryPage: React.FC = () => {
             <Button onClick={handleExport} variant="secondary">
                 <Download size={16} className="mr-2"/> Export CSV
             </Button>
-            <Button as="label" variant="secondary" className="cursor-pointer">
+            {/* FIX: Replaced Button with `as="label"` with a standard Button and a hidden file input. */}
+            <Button onClick={handleImportClick} variant="secondary">
                 <Upload size={16} className="mr-2"/> Import CSV
-                <input type="file" accept=".csv" className="hidden" onChange={handleImport} />
             </Button>
+            <input 
+              type="file" 
+              ref={fileInputRef} 
+              accept=".csv" 
+              className="hidden" 
+              onChange={handleImport} 
+            />
             <Button onClick={() => handleOpenModal()}>
                 <Plus size={16} className="mr-2"/> Add New Item
             </Button>

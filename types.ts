@@ -95,6 +95,7 @@ export interface CustomOrder {
   due_date: string;
   created_at: string;
   title: string;
+  description?: string;
 }
 
 export interface WorkOrder {

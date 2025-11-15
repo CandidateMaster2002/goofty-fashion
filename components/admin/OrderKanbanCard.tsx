@@ -2,7 +2,7 @@ import React from 'react';
 import { CustomOrder, Customer, User, CustomOrderStatus } from '../../types';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, User as UserIcon, Calendar } from 'lucide-react';
 import { KANBAN_STAGES } from '../../constants';
 
 interface OrderKanbanCardProps {
@@ -24,18 +24,19 @@ export const OrderKanbanCard: React.FC<OrderKanbanCardProps> = ({ order, custome
   };
 
   return (
-    <Card className="mb-4 bg-stone-50">
-      <h4 className="font-bold">{order.title}</h4>
-      <p className="text-sm text-stone-600">For: {customer?.name || 'N/A'}</p>
-      <p className="text-sm text-stone-500">Due: {new Date(order.due_date).toLocaleDateString()}</p>
-      {tailor && <p className="text-xs mt-2">Assigned to: {tailor.name}</p>}
+    <Card className="mb-4 bg-white hover:bg-slate-50">
+      <h4 className="font-bold text-base text-slate-800">{order.title}</h4>
+      <div className="text-sm text-slate-600 mt-2 space-y-1">
+        <p className="flex items-center"><UserIcon size={14} className="mr-2 text-slate-500"/> {customer?.name || 'N/A'}</p>
+        <p className="flex items-center"><Calendar size={14} className="mr-2 text-slate-500"/> Due: {new Date(order.due_date).toLocaleDateString()}</p>
+      </div>
+      {tailor && <p className="text-xs mt-2 text-slate-500">Assigned: {tailor.name}</p>}
       
-      <div className="flex justify-between items-center mt-3">
-        <Button size="sm" variant="secondary" onClick={() => move('back')} disabled={!canMoveBack}>
+      <div className="flex justify-between items-center mt-4 border-t pt-3">
+        <Button size="sm" variant="secondary" onClick={() => move('back')} disabled={!canMoveBack} className="p-2 h-8 w-8">
           <ChevronLeft size={16} />
         </Button>
-        <span className="text-xs font-semibold">{order.status}</span>
-        <Button size="sm" variant="secondary" onClick={() => move('forward')} disabled={!canMoveForward}>
+        <Button size="sm" variant="secondary" onClick={() => move('forward')} disabled={!canMoveForward} className="p-2 h-8 w-8">
           <ChevronRight size={16} />
         </Button>
       </div>
