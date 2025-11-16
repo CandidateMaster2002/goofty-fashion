@@ -9,7 +9,7 @@ const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 // Fetches the initial seed data from the public folder
 const fetchSeedData = async (): Promise<AppData> => {
-  const response = await fetch('/seed.json');
+  const response = await fetch('/public/seed.json');
   if (!response.ok) {
     throw new Error('Failed to fetch seed data');
   }
